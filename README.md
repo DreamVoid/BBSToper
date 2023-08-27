@@ -1,69 +1,47 @@
-# BBSToper
+<div align="center">
+    <h1> BBSToper </h1>
+</div>
 
-这是一个检测mcbbs服务器宣传贴顶帖后，玩家输入指令领取奖励的bukkit插件.
-
-此插件的mcbbs页面：[https://www.mcbbs.net/thread-789082-1-1.html](https://www.mcbbs.net/thread-789082-1-1.html)
-
-可用发行版: [https://github.com/R-Josef/BBSToper/releases](https://github.com/R-Josef/BBSToper/releases)
-
-## 许可
-
-本软件的许可请查看[LICENCE](https://github.com/R-Josef/BBSToper/blob/master/LICENSE)文件.
-
-## 用到的库
-
-1. [Jsoup](https://jsoup.org/)
-2. [bStats](https://bstats.org/)
-3. [PlaceHolderAPI](https://github.com/PlaceholderAPI/PlaceholderAPI)
-
-## 构建
-
-此项目采用maven构建, 提供了pom文件, clone此git库后可以使用maven进行构建.
+BBSToper 是由 R-Josef 开发、DreamVoid 重制的插件，能够奖励为服务器宣传帖顶帖的玩家。
 
 ## 使用方法
 
-1. 获得一份构建好的jar文件, 请查看[https://github.com/R-Josef/BBSToper/releases](https://github.com/R-Josef/BBSToper/releases)
-2. 将构建好的文件放入plugins文件夹
-3. 前往mcbbs复制您的帖子id并替换掉配置文件中默认链接中的id
-4. 重启/启动服务器
+1. 下载插件并将其放置在 `plugins` 文件夹；
+2. 启动一次服务器，然后关闭；
+3. 复制 MCBBS 帖子的 ID，并将其填入配置文件中；
+4. 再次启动服务器，即可享受插件的功能。
 
 ## 命令&权限
+### 命令
 
-**玩家默认拥有`bbstoper.user`权限**
+| 命令 | 描述 | 权限 |
+| ----- | ----- | ----- |
+| `/bbstoper`/`/poster`/`/bt`/`/toper` | 显示 GUI | `bbstoper.user` |
+| `/bbstoper help` | 显示帮助信息 | `bbstoper.user` |
+| `/bbstoper binding <MCBBS论坛ID>` | 绑定论坛账号, 注意这里是ID不是uid | `bbstoper.binding` |
+| `/bbstoper reward` | 领取奖励 | `bbstoper.reward` |
+| `/bbstoper testreward [模式]` | 测试奖励, 模式: `normal` `incentive` `offday` | `bbstoper.testreward` |
+| `/bbstoper list <页数>` | 列出所有顶帖者 | `bbstoper.list` |
+| `/bbstoper top <页数>` | 按照顶贴次数列排名出所有已绑定玩家 | `bbstoper.top` |
+| `/bbstoper check bbsid <论坛ID>` | `bbstoper.check` | 查看一个论坛id的绑定者 |
+| `/bbstoper check player <玩家ID>` | `bbstoper.check` | 查看一个玩家绑定的论坛id |
+| `/bbstoper delete player <玩家ID>` | `bbstoper.delete` | 删除一个玩家的数据 |
+| `/bbstoper reload` | `bbstoper.reload` | 重载插件 |
 
-| bbstoper.user的子权限 |
-| --------------------- |
-| `bbstoper.binding`    |
-| `bbstoper.reward`     |
+### 权限
 
-**op默认拥有`bbstoper.admin`权限**
-
-| bbstoper.admin的子权限         |
-| ------------------------------ |
-| `bbstoper.testreward`          |
-| `bbstoper.list`                |
-| `bbstoper.top`                 |
-| `bbstoper.check`               |
-| `bbstoper.delete`              |
-| `bbstoper.reload`              |
-| `bbstoper.bypassquerycooldown` |
-
-**/bbstoper /poster /bt 都是可用命令别名**
-
-| 命令                               | 权限                           | 描述                                          |
-| ---------------------------------- | ------------------------------ | --------------------------------------------- |
-| `/bbstoper`                        | 无需权限                       | 显示箱子GUI                                   |
-| `/bbstoper help`                   | 无需权限                       | 显示帮助信息                                  |
-| `/bbstoper binding <MCBBS论坛ID>`  | `bbstoper.binding`             | 绑定论坛账号, 注意这里是ID不是uid             |
-| `/bbstoper reward`                 | `bbstoper.reward`              | 领取奖励                                      |
-| `/bbstoper testreward [模式]`      | `bbstoper.testreward`          | 测试奖励, 模式: `normal` `incentive` `offday` |
-| `/bbstoper list <页数>`            | `bbstoper.list`                | 列出所有顶帖者                                |
-| `/bbstoper top <页数>`             | `bbstoper.top`                 | 按照顶贴次数列排名出所有已绑定玩家            |
-| 无                                 | `bbstoper.bypassquerycooldown` | 绕过查询冷却                                  |
-| `/bbstoper check bbsid <论坛ID>`   | `bbstoper.check`               | 查看一个论坛id的绑定者                        |
-| `/bbstoper check player <玩家ID>`  | `bbstoper.check`               | 查看一个玩家绑定的论坛id                      |
-| `/bbstoper delete player <玩家ID>` | `bbstoper.delete`              | 删除一个玩家的数据                            |
-| `/bbstoper reload`                 | `bbstoper.reload`              | 重载插件                                      |
+| 权限 | 描述 | 默认 |
+| `bbstoper.user` | 玩家默认权限 | TRUE |
+| `bbstoper.command.binding` | 允许使用 /bbstoper binding | OP/`bbstoper.user` |
+| `bbstoper.command.reward` | 允许使用 /bbstoper reward | OP/`bbstoper.user` |
+| `bbstoper.admin` | 管理员默认权限 | OP |
+| `bbstoper.command.testreward` | 允许使用 /bbstoper testreward | OP/`bbstoper.admin` |
+| `bbstoper.command.list` | 允许使用 /bbstoper list | OP/`bbstoper.admin`|
+| `bbstoper.command.top` | 允许使用 /bbstoper top | OP/`bbstoper.admin` |
+| `bbstoper.command.check` | 允许使用 /bbstoper check | OP/`bbstoper.admin` |
+| `bbstoper.command.delete` | 允许使用 /bbstoper delete | OP/`bbstoper.admin` |
+| `bbstoper.command.reload` | 允许使用 /bbstoper reload | OP/`bbstoper.admin` |
+| `bbstoper.bypassquerycooldown` | 绕过查询冷却 | FALSE |
 
 ## PlaceholderAPI 占位符
 
@@ -78,4 +56,12 @@
 | %bbstoper_lastpost%   | 上一次被顶贴的时间                                 |
 | %bbstoper_top_<序号>% | 顶贴排行第"序号"个的顶贴信息, 例: %bbstoper_top_1% |
 
+## 许可
 
+[LICENCE](./LICENSE)
+
+## 使用的依赖库
+
+1. [Jsoup](https://jsoup.org/)
+2. [bStats](https://bstats.org/)
+3. [PlaceHolderAPI](https://github.com/PlaceholderAPI/PlaceholderAPI)
