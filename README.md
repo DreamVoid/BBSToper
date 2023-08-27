@@ -18,15 +18,15 @@ BBSToper 是由 R-Josef 开发、DreamVoid 重制的插件，能够奖励为服�
 | ----- | ----- | ----- |
 | `/bbstoper` `/poster` `/bt` `/toper` | 插件主命令 / 显示 GUI | `bbstoper.user` |
 | `/bbstoper help` | 显示帮助信息 | `bbstoper.user` |
-| `/bbstoper binding <MCBBS论坛ID>` | 绑定论坛账号, 注意这里是ID不是uid | `bbstoper.binding` |
-| `/bbstoper reward` | 领取奖励 | `bbstoper.reward` |
-| `/bbstoper testreward [模式]` | 测试奖励, 模式: `normal` `incentive` `offday` | `bbstoper.testreward` |
-| `/bbstoper list <页数>` | 列出所有顶帖者 | `bbstoper.list` |
-| `/bbstoper top <页数>` | 按照顶贴次数列排名出所有已绑定玩家 | `bbstoper.top` |
-| `/bbstoper check bbsid <论坛ID>` | `bbstoper.check` | 查看一个论坛id的绑定者 |
-| `/bbstoper check player <玩家ID>` | `bbstoper.check` | 查看一个玩家绑定的论坛id |
-| `/bbstoper delete player <玩家ID>` | `bbstoper.delete` | 删除一个玩家的数据 |
-| `/bbstoper reload` | `bbstoper.reload` | 重载插件 |
+| `/bbstoper binding <MCBBS论坛ID>` | 绑定论坛账号, 注意这里是ID不是uid | `bbstoper.command.binding` |
+| `/bbstoper reward` | 领取奖励 | `bbstoper.command.reward` |
+| `/bbstoper testreward [模式]` | 测试奖励, 模式: `normal` `incentive` `offday` | `bbstoper.command.testreward` |
+| `/bbstoper list <页数>` | 列出所有顶帖者 | `bbstoper.command.list` |
+| `/bbstoper top <页数>` | 按照顶贴次数列排名出所有已绑定玩家 | `bbstoper.command.top` |
+| `/bbstoper check bbsid <论坛ID>` | 查看一个论坛id的绑定者 | `bbstoper.command.check` |
+| `/bbstoper check player <玩家ID>` | 查看一个玩家绑定的论坛id | `bbstoper.command.check` |
+| `/bbstoper delete player <玩家ID>` | 删除一个玩家的数据 | `bbstoper.command.delete` |
+| `/bbstoper reload` | 重载插件 | `bbstoper.command.reload` |
 
 ### 权限
 
