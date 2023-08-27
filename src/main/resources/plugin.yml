@@ -67,5 +67,5 @@ permissions:
     default: op
 
   bbstoper.bypass.querycooldown:
-    description: 允许跳过顶帖间隔
+    description: 允许绕过查询冷却
     default: false
