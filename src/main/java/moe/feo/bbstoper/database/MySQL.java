@@ -24,6 +24,7 @@ public class MySQL extends AbstractDatabase {
 
 		HikariConfig config = new HikariConfig();
 		config.setDriverClassName(driver);
+		config.setPoolName("BBSToper MySQL");
 		config.setJdbcUrl("jdbc:mysql://" + Config.DATABASE_MYSQL_ADDRESS + "/" + Config.DATABASE_MYSQL_DATABASE + Config.DATABASE_MYSQL_PARAMETERS);
 		config.setUsername(Config.DATABASE_MYSQL_USERNAME.getString());
 		config.setPassword(Config.DATABASE_MYSQL_PASSWORD.getString());

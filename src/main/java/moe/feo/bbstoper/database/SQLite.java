@@ -23,6 +23,7 @@ public class SQLite extends AbstractDatabase {
 
 		HikariConfig config = new HikariConfig();
 		config.setDriverClassName(driver);
+		config.setPoolName("BBSToper SQLite");
 		config.setJdbcUrl("jdbc:sqlite:" + Config.DATABASE_SQLITE_FOLDER.getString().replaceAll("%PLUGIN_FOLDER%", "%s") + File.separator + Config.DATABASE_SQLITE_DATABASE.getString());
 		config.setConnectionTimeout(Config.DATABASE_POOL_CONNECTIONTIMEOUT.getLong());
 		config.setIdleTimeout(Config.DATABASE_POOL_IDLETIMEOUT.getLong());
