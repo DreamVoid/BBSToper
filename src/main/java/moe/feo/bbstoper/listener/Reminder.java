@@ -1,5 +1,6 @@
 package moe.feo.bbstoper.listener;
 
+import me.dreamvoid.bbstoper.Utils;
 import moe.feo.bbstoper.BBSToper;
 import moe.feo.bbstoper.Crawler;
 import moe.feo.bbstoper.Poster;
@@ -58,7 +59,7 @@ public class Reminder implements Listener {
 					if (extra != null) {// 说明有额外奖励信息
 						list.add(Message.EXTRAINFO.getString().replaceAll("%EXTRA%", extra));
 					}
-					String url = Config.MCBBS_LINK.getString() + "thread-" + Config.MCBBS_URL.getString() + "-1-1.html";
+					String url = Utils.getMCBBSUrl(true);
 					for (String msg : list) {
 						event.getPlayer().sendMessage(Message.PREFIX.getString() + msg.replaceAll("%PAGE%", url));
 					}

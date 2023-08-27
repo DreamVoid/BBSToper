@@ -1,5 +1,6 @@
 package moe.feo.bbstoper;
 
+import me.dreamvoid.bbstoper.Utils;
 import moe.feo.bbstoper.config.Message;
 import moe.feo.bbstoper.config.Config;
 import moe.feo.bbstoper.database.DatabaseManager;
@@ -30,7 +31,7 @@ public class Crawler {
 	}
 
 	public void resolveWebData() {
-		String url = Config.MCBBS_LINK.getString() + "forum.php?mod=misc&action=viewthreadmod&tid=" + Config.MCBBS_URL.getString() + "&mobile=no";
+		String url = Utils.getMCBBSUrl();
 		try {
 			Document doc = Config.PROXY_ENABLE.getBoolean() ? Jsoup.connect(url).proxy(Config.PROXY_IP.getString(), Config.PROXY_PORT.getInt()).get() : Jsoup.connect(url).get();
 			Elements listClass = doc.getElementsByClass("list"); // 获取一个class名为list的元素的合集

@@ -1,6 +1,7 @@
 package moe.feo.bbstoper;
 
 import me.clip.placeholderapi.expansion.PlaceholderExpansion;
+import me.dreamvoid.bbstoper.Utils;
 import moe.feo.bbstoper.config.Message;
 import moe.feo.bbstoper.config.Config;
 import moe.feo.bbstoper.database.DatabaseManager;
@@ -72,7 +73,7 @@ public class PAPIExpansion extends PlaceholderExpansion {
 			return Config.MCBBS_URL.getString();
 		}
 		if (identifier.equals("pageurl")) {// 宣传贴url
-			return Config.MCBBS_LINK.getString() + "thread-" + Config.MCBBS_URL.getString() + "-1-1.html";
+			return Utils.getMCBBSUrl(true);
 		}
 		if (identifier.equals("lastpost")) {// 上一次顶贴时间
 			Crawler crawler = new Crawler();

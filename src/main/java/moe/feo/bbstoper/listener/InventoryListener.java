@@ -1,5 +1,6 @@
 package moe.feo.bbstoper.listener;
 
+import me.dreamvoid.bbstoper.Utils;
 import moe.feo.bbstoper.gui.GUI;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -60,7 +61,7 @@ public class InventoryListener implements Listener {
 			case 22:{ // 获取链接
 				player.closeInventory();
 				for (String msg : Message.CLICKPOSTICON.getStringList()) {
-					String url = Config.MCBBS_LINK.getString() + "thread-" + Config.MCBBS_URL.getString() + "-1-1.html";
+					String url = Utils.getMCBBSUrl(true);
 					player.sendMessage(msg.replaceAll("%PAGE%", url));
 				}
 				break;
