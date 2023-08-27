@@ -5,59 +5,67 @@ authors:
   - Fengshuai(R_Josef)
   - DreamVoid
 website: https://www.mcbbs.net/thread-789082-1-1.html
-softdepend: [PlaceholderAPI]
+softdepend:
+  - PlaceholderAPI
 commands:
   bbstoper:
-    description: 'BBSToper的主要指令.'
+    description: 'BBSToper 主命令'
     aliases: 
       - bt
       - poster
+      - toper
     permission: bbstoper.user
-    usage: |
-      /bbstoper - 打开GUI菜单
-      /bbstoper help - 显示帮助页面
-      /bbstoper binding <MCBBS论坛ID> - 绑定论坛账号，注意这里是ID不是uid
-      /bbstoper reward - 领取奖励
-      /bbstoper testreward <奖励种类> - 测试奖励
-      /bbstoper list <页数> - 列出6天以内所有顶帖者
-      /bbstoper top - 按顶贴次数顺序列出所有顶贴者
-      /bbstoper check bbsid <论坛ID> - 查看一个论坛id的绑定者
-      /bbstoper check player <玩家ID> - 查看一个玩家绑定的论坛id
-      /bbstoper delete player <玩家ID> - 删除一个玩家的数据
-      /bbstoper reload - 重载插件
+    usage: For help, type /bbstoper help
 permissions:
   bbstoper.admin:
     description: "BBSToper 管理员权限"
     default: op
     children:
-      bbstoper.testreward:
-        description: '测试顶贴奖励.'
-        default: op
-      bbstoper.list:
-        description: '列出顶贴列表.'
-        default: op
-      bbstoper.top:
-        description: '将所有玩家按照顶贴次数排序.'
-        default: op
-      bbstoper.bypassquerycooldown:
-        description: '绕过查询冷却.'
-        default: op
-      bbstoper.check:
-        description: '检查玩家ID和论坛ID.'
-        default: op
-      bbstoper.delete:
-        description: '删除一个玩家的数据.'
-        default: op
-      bbstoper.reload:
-        description: '重新加载插件配置'
-        default: op
-    bbstoper.user:
-      description: "BBSToper 用户权限"
-      default: true
-      children:
-        bbstoper.binding:
-          description: "绑定论坛账号."
-          default: true
-        bbstoper.reward:
-          description: "获取顶贴奖励."
-          default: true
+      bbstoper.command.*: true
+  bbstoper.user:
+    description: "BBSToper 用户权限"
+    default: true
+    children:
+      bbstoper.command.binding: true
+      bbstoper.command.reward: true
+
+  bbstoper.command.*:
+    descriprion: 允许使用所有 /bbstoper 子命令
+    default: op
+    children:
+      bbstoper.command.reload: true
+      bbstoper.command.reward: true
+      bbstoper.command.testreward: true
+      bbstoper.command.binding: true
+      bbstoper.command.list: true
+      bbstoper.command.top: true
+      bbstoper.command.check: true
+      bbstoper.command.delete: true
+  bbstoper.command.reload:
+    description: 允许使用 /bbstoper reload
+    default: op
+  bbstoper.command.reward:
+    description: 允许使用 /bbstoper reward
+    default: op
+  bbstoper.command.testreward:
+    description: 允许使用 /bbstoper testreward
+    default: op
+  bbstoper.command.binding:
+    description: 允许使用 /bbstoper binding
+    default: op
+  bbstoper.command.list:
+    description: 允许使用 /bbstoper list
+    default: op
+  bbstoper.command.top:
+    description: 允许使用 /bbstoper top
+    default: op
+  bbstoper.command.check:
+    description: 允许使用 /bbstoper check
+    default: op
+  bbstoper.command.delete:
+    description: 允许使用 /bbstoper delete
+    default: op
+
+  bbstoper.bypass.querycooldown:
+    description: 允许跳过顶帖间隔
+    default: false

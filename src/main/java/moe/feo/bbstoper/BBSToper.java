@@ -1,5 +1,6 @@
 package moe.feo.bbstoper;
 
+import me.dreamvoid.bbstoper.command.BBSToperCommand;
 import moe.feo.bbstoper.config.Message;
 import moe.feo.bbstoper.config.Config;
 import moe.feo.bbstoper.listener.Reminder;
@@ -30,8 +31,8 @@ public class BBSToper extends JavaPlugin {
 		DatabaseManager.initializeDatabase();
 
 		getLogger().info("Registering commands.");
-		getCommand("bbstoper").setExecutor(CLI.getInstance());
-		getCommand("bbstoper").setTabCompleter(CLI.getInstance());
+		getCommand("bbstoper").setExecutor(new BBSToperCommand());
+		getCommand("bbstoper").setTabCompleter(new BBSToperCommand());
 
 		new Reminder(this);
 		new InventoryListener(this);

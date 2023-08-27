@@ -1,16 +1,10 @@
 package moe.feo.bbstoper;
 
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.UUID;
-
-import moe.feo.bbstoper.config.Message;
 import moe.feo.bbstoper.config.Config;
+import moe.feo.bbstoper.config.Message;
 import moe.feo.bbstoper.database.DatabaseManager;
+import moe.feo.bbstoper.gui.GUI;
+import moe.feo.bbstoper.listener.IDListener;
 import moe.feo.bbstoper.utils.Crawler;
 import moe.feo.bbstoper.utils.Util;
 import org.bukkit.Bukkit;
@@ -21,8 +15,8 @@ import org.bukkit.command.TabExecutor;
 import org.bukkit.entity.Player;
 import org.bukkit.scheduler.BukkitRunnable;
 
-import moe.feo.bbstoper.gui.GUI;
-import moe.feo.bbstoper.listener.IDListener;
+import java.text.SimpleDateFormat;
+import java.util.*;
 
 public class CLI implements TabExecutor {
 	private final Map<String, String> cache = new HashMap<>();// 这个map是为了暂存玩家的绑定信息的
@@ -296,7 +290,6 @@ public class CLI implements TabExecutor {
 
 					break;
 				}
-
 				case "testreward": {
 					if (!(sender instanceof Player)) {
 						sender.sendMessage(Message.PLAYERCMD.getString());
@@ -327,7 +320,6 @@ public class CLI implements TabExecutor {
 					sender.sendMessage(Message.PREFIX.getString() + Message.REWARDGIVED.getString());
 					break;
 				}
-
 				case "list": {
 					if (!sender.hasPermission("bbstoper.list")) {
 						sender.sendMessage(Message.PREFIX.getString() + Message.NOPERMISSION.getString());
