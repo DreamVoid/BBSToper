@@ -16,7 +16,7 @@ BBSToper 是由 R-Josef 开发、DreamVoid 重制的插件，能够奖励为服�
 
 | 命令 | 描述 | 权限 |
 | ----- | ----- | ----- |
-| `/bbstoper`/`/poster`/`/bt`/`/toper` | 显示 GUI | `bbstoper.user` |
+| `/bbstoper` `/poster` `/bt` `/toper` | 插件主命令 / 显示 GUI | `bbstoper.user` |
 | `/bbstoper help` | 显示帮助信息 | `bbstoper.user` |
 | `/bbstoper binding <MCBBS论坛ID>` | 绑定论坛账号, 注意这里是ID不是uid | `bbstoper.binding` |
 | `/bbstoper reward` | 领取奖励 | `bbstoper.reward` |
@@ -31,6 +31,7 @@ BBSToper 是由 R-Josef 开发、DreamVoid 重制的插件，能够奖励为服�
 ### 权限
 
 | 权限 | 描述 | 默认 |
+| ----- | ----- | ----- |
 | `bbstoper.user` | 玩家默认权限 | TRUE |
 | `bbstoper.command.binding` | 允许使用 /bbstoper binding | OP/`bbstoper.user` |
 | `bbstoper.command.reward` | 允许使用 /bbstoper reward | OP/`bbstoper.user` |
