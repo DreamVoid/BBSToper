@@ -1,7 +1,7 @@
 package moe.feo.bbstoper.database;
 
 import moe.feo.bbstoper.BBSToper;
-import moe.feo.bbstoper.Util;
+import moe.feo.bbstoper.utils.Util;
 import moe.feo.bbstoper.config.Config;
 import org.bukkit.scheduler.BukkitRunnable;
 import org.bukkit.scheduler.BukkitTask;

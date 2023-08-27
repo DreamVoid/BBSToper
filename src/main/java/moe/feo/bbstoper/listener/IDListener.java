@@ -32,7 +32,7 @@ import moe.feo.bbstoper.BBSToper;
 import moe.feo.bbstoper.CLI;
 import moe.feo.bbstoper.config.Message;
 import moe.feo.bbstoper.config.Config;
-import moe.feo.bbstoper.Util;
+import moe.feo.bbstoper.utils.Util;
 
 public class IDListener extends RegisteredListener implements Listener, EventExecutor {
 	public static final Object lock = new Object(); // 线程锁

@@ -1,6 +1,9 @@
-package moe.feo.bbstoper;
+package moe.feo.bbstoper.utils;
 
 import me.dreamvoid.bbstoper.Utils;
+import moe.feo.bbstoper.BBSToper;
+import moe.feo.bbstoper.Poster;
+import moe.feo.bbstoper.Reward;
 import moe.feo.bbstoper.config.Message;
 import moe.feo.bbstoper.config.Config;
 import moe.feo.bbstoper.database.DatabaseManager;

@@ -1,5 +1,7 @@
-package moe.feo.bbstoper;
+package moe.feo.bbstoper.utils;
 
+import moe.feo.bbstoper.BBSToper;
+import moe.feo.bbstoper.Reward;
 import moe.feo.bbstoper.config.Message;
 import moe.feo.bbstoper.config.Config;
 import org.bukkit.scheduler.BukkitRunnable;
