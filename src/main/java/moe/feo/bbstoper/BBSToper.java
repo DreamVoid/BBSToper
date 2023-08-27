@@ -28,7 +28,6 @@ public class BBSToper extends JavaPlugin {
 	public void onEnable() {
 		getLogger().info("Initializing database.");
 		DatabaseManager.initializeDatabase();
-		DatabaseManager.startTimingReconnect();
 
 		getLogger().info("Registering commands.");
 		getCommand("bbstoper").setExecutor(CLI.getInstance());

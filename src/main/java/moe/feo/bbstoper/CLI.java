@@ -469,7 +469,6 @@ public class CLI implements TabExecutor {
 					Config.load();
 					Message.load();
 					DatabaseManager.initializeDatabase();
-					DatabaseManager.startTimingReconnect();
 					Util.startAutoReward();
 					sender.sendMessage(Message.PREFIX.getString() + Message.RELOAD.getString());
 					break;
