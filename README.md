@@ -1,5 +1,9 @@
 <div align="center">
     <h1> BBSToper </h1>
+
+[![GitHub release](https://img.shields.io/github/v/release/DreamVoid/BBSToper?style=flat-square)](https://github.com/DreamVoid/BBSToper/releases/latest)
+[![GitHub Actions CI](https://img.shields.io/github/actions/workflow/status/DreamVoid/BBSToper/maven.yml?style=flat-square)](https://github.com/DreamVoid/BBSToper/actions/workflows/maven.yml?query=is%3Asuccess)
+![GitHub all releases](https://img.shields.io/github/downloads/DreamVoid/BBSToper/total?style=flat-square)
 </div>
 
 BBSToper 是由 R-Josef 开发、DreamVoid 重制的插件，能够奖励为服务器宣传帖顶帖的玩家。
