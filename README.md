@@ -59,7 +59,7 @@ BBSToper 是由 R-Josef 开发、DreamVoid 重制的插件，能够奖励为服�
 
 ## 许可
 
-[LICENCE](./LICENSE)
+[LICENSE](./LICENSE)
 
 ## 使用的依赖库
 
