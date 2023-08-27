@@ -6,6 +6,7 @@ import moe.feo.bbstoper.Reward;
 import moe.feo.bbstoper.config.Config;
 import moe.feo.bbstoper.config.Message;
 import moe.feo.bbstoper.database.DatabaseManager;
+import moe.feo.bbstoper.gui.GUI;
 import moe.feo.bbstoper.listener.IDListener;
 import moe.feo.bbstoper.utils.Crawler;
 import moe.feo.bbstoper.utils.Util;
@@ -26,8 +27,14 @@ public class BBSToperCommand implements TabExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if (args.length == 0) {
-            sender.sendMessage("This server is running "+ BBSToper.INSTANCE.getName() + " version " + BBSToper.INSTANCE.getDescription().getVersion() + " by "+ BBSToper.INSTANCE.getDescription().getAuthors().toString().replace("[","").replace("]",""));
-            return false;
+            if (sender instanceof Player) {
+                Player player = (Player) sender;
+                new GUI(player);
+                return true;
+            } else {
+                sender.sendMessage("This server is running " + BBSToper.INSTANCE.getName() + " version " + BBSToper.INSTANCE.getDescription().getVersion() + " by " + BBSToper.INSTANCE.getDescription().getAuthors().toString().replace("[", "").replace("]", ""));
+                return false;
+            }
         }
         
         switch (args[0].toLowerCase()){
