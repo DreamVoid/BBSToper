@@ -1,62 +1,73 @@
 package moe.feo.bbstoper.config;
 
-import java.io.*;
-import java.util.Collections;
-import java.util.List;
-import java.util.stream.Collectors;
-
 import com.google.common.base.Charsets;
 import moe.feo.bbstoper.BBSToper;
 import org.bukkit.ChatColor;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
 
+import java.io.File;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.util.Collections;
+import java.util.List;
+import java.util.stream.Collectors;
+
 public enum Message {
-	PREFIX("prefix"),
-	ENABLE("enable"),
-	RELOAD("reload"),
-	FAILEDCONNECTSQL("failedconnectsql"),
-	QUERYCOOLDOWN("querycooldown"),
-	POSTERID("posterid"),
-	POSTERNUM("posternum"),
-	OVERPAGE("overpage"),
-	NOPLAYER("noplayer"),
-	POSTERTIME("postertime"),
-	PAGEINFO("pageinfo"),
-	NOPOSTER("noposter"),
-	POSTERPLAYER("posterplayer"),
-	POSTERTOTAL("postertotal"),
-	PAGEINFOTOP("pageinfotop"),
-	NOTBOUND("notbound"),
-	NOPOST("nopost"),
-	OVERTIME("overtime"),
-	WAITAMIN("waitamin"),
-	INTERVALTOOSHORT("intervaltooshort"),
-	REWARD("reward"),
-	EXTRAREWARD("extrareward"),
-	REWARDGIVED("rewardgived"),
-	BROADCAST("broadcast"),
-	ENTER("enter"),
-	CANCELED("canceled"),
-	REPEAT("repeat"),
-	NOTSAME("notsame"),
-	ONCOOLDOWN("oncooldown"),
-	SAMEBIND("samebind"),
-	OWNSAMEBIND("ownsamebind"),
-	BINDINGSUCCESS("bindingsuccess"),
-	IDOWNER("idowner"),
-	IDNOTFOUND("idnotfound"),
-	OWNERID("ownerid"),
-	OWNERNOTFOUND("ownernotfound"),
-	NOPERMISSION("nopermission"),
-	INVALID("invalid"),
-	INVALIDNUM("invalidnum"),
-	PLAYERCMD("playercmd"),
-	PAGENOTVISIBLE("pagenotvisible"),
-	NONE("none"),
-	FAILEDGETWEB("failedgetweb"),
-	FAILEDRESOLVEWEB("failedresolveweb"),
-	FAILEDUNINSTALLMO("faileduninstallmo"),
+	PREFIX("chat.prefix"),
+	RELOAD("chat.reload"),
+	SQL_EXCEPTION("chat.sql-exception"),
+	QUERY_COOLDOWN("chat.query-cooldown"),
+
+	POSTERID("chat.posterid"),
+	POSTERNUM("chat.posternum"),
+	OVERPAGE("chat.overpage"),
+
+	POSTERTIME("chat.postertime"),
+	PAGEINFO("chat.pageinfo"),
+	NOPOSTER("chat.noposter"),
+
+	POSTERPLAYER("chat.posterplayer"),
+	POSTERTOTAL("chat.postertotal"),
+	PAGEINFOTOP("chat.pageinfotop"),
+	NOPLAYER("chat.noplayer"),
+
+	NOTBOUND("chat.reward.notbound"),
+	NOPOST("chat.reward.nopost"),
+	OVERTIME("chat.reward.overtime"),
+	WAITAMIN("chat.reward.waitamin"),
+	INTERVALTOOSHORT("chat.reward.intervaltooshort"),
+	REWARD("chat.reward.reward"),
+	EXTRAREWARD("chat.reward.extrareward"),
+	REWARDGIVED("chat.reward.rewardgived"),
+	BROADCAST("chat.reward.broadcast"),
+
+	ENTER("chat.bind.enter"),
+	CANCELED("chat.bind.canceled"),
+	REPEAT("chat.bind.repeat"),
+	NOTSAME("chat.bind.notsame"),
+	ONCOOLDOWN("chat.bind.oncooldown"),
+	SAMEBIND("chat.bind.samebind"),
+	OWNSAMEBIND("chat.bind.ownsamebind"),
+	BINDINGSUCCESS("chat.bind.bindingsuccess"),
+
+	IDOWNER("chat.check.idowner"),
+	IDNOTFOUND("chat.check.idnotfound"),
+	OWNERID("chat.check.ownerid"),
+	OWNERNOTFOUND("chat.check.ownernotfound"),
+
+	DELETESUCCESS("chat.delete.deletesuccess"),
+
+	NOPERMISSION("chat.other.nopermission"),
+	INVALID("chat.other.invalid"),
+	INVALIDNUM("chat.other.invalidnum"),
+	PLAYERCMD("chat.other.playercmd"),
+	PAGENOTVISIBLE("chat.other.pagenotvisible"),
+	NONE("chat.other.none"),
+	FAILEDGETWEB("chat.other.failedgetweb"),
+	FAILEDRESOLVEWEB("chat.other.failedresolveweb"),
+	FAILEDUNINSTALLMO("chat.other.faileduninstallmo"),
+
 	GUI_TITLE("gui.title"),
 	GUI_FRAME("gui.frame"),
 	GUI_SKULL("gui.skull"),
@@ -77,10 +88,12 @@ public enum Message {
 	GUI_PAGENOTVISIBLE("gui.pagenotvisible"),
 	GUI_CLICKOPEN("gui.clickopen"),
 	GUI_REWARDSINFO("gui.rewardsinfo"),
+
 	CLICKPOSTICON("clickposticon"),
-	DELETESUCCESS("deletesuccess"),
+
 	INFO("info"),
 	EXTRAINFO("extrainfo"),
+
 	HELP_TITLE("help.title"),
 	HELP_HELP("help.help"),
 	HELP_BINDING("help.binding"),

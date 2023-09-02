@@ -217,7 +217,7 @@ public class CLI implements TabExecutor {
 					if (!sender.hasPermission("bbstoper.bypassquerycooldown")) {
 						double cooldown = getQueryCooldown(((Player) sender).getUniqueId());
 						if (cooldown > 0) {
-							sender.sendMessage(Message.PREFIX.getString() + Message.QUERYCOOLDOWN.getString()
+							sender.sendMessage(Message.PREFIX.getString() + Message.QUERY_COOLDOWN.getString()
 									.replaceAll("%COOLDOWN%", String.valueOf((int) cooldown)));
 							return;
 						} else {
@@ -328,7 +328,7 @@ public class CLI implements TabExecutor {
 					if (sender instanceof Player && !sender.hasPermission("bbstoper.bypassquerycooldown")) {
 						double cooldown = getQueryCooldown(((Player) sender).getUniqueId());
 						if (cooldown > 0) {
-							sender.sendMessage(Message.PREFIX.getString() + Message.QUERYCOOLDOWN.getString()
+							sender.sendMessage(Message.PREFIX.getString() + Message.QUERY_COOLDOWN.getString()
 									.replaceAll("%COOLDOWN%", String.valueOf((int) cooldown)));
 							return;
 						} else {
@@ -396,7 +396,7 @@ public class CLI implements TabExecutor {
 					if (sender instanceof Player && !sender.hasPermission("bbstoper.bypassquerycooldown")) {
 						double cooldown = getQueryCooldown(((Player) sender).getUniqueId());
 						if (cooldown > 0) {
-							sender.sendMessage(Message.PREFIX.getString() + Message.QUERYCOOLDOWN.getString()
+							sender.sendMessage(Message.PREFIX.getString() + Message.QUERY_COOLDOWN.getString()
 									.replaceAll("%COOLDOWN%", String.valueOf((int) cooldown)));
 							return;
 						} else {

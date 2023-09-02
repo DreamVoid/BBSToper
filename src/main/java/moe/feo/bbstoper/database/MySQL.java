@@ -46,7 +46,7 @@ public class MySQL extends AbstractDatabase {
 		try {
 			return ds.getConnection();
 		} catch (SQLException e) {
-			BBSToper.INSTANCE.getLogger().severe(Message.FAILEDCONNECTSQL.getString());
+			BBSToper.INSTANCE.getLogger().severe(Message.SQL_EXCEPTION.getString());
 			throw new RuntimeException(e);
 		}
 	}

@@ -7,6 +7,7 @@ authors:
 website: https://www.mcbbs.net/thread-789082-1-1.html
 softdepend:
   - PlaceholderAPI
+api-version: 1.13
 commands:
   bbstoper:
     description: 'BBSToper 主命令'

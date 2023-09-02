@@ -1,74 +1,70 @@
 # BBSToper 语言文件
 
-#插件前缀
-prefix: '&e[&dBBSToper&e] '
-
-#载入
-enable: '插件已启用!'
-reload: '&a配置已重载!'
-
-#数据库
-failedconnectsql: '连接数据库时出错！'
-
-#查询冷却
-querycooldown: '&4查询操作正在冷却, 请在 %COOLDOWN% 秒后重试.'
-
-#列表通用
-posternum: '&2顶帖数量&f'
-overpage: '&4您输入的页码超出了总页数!'
-posterid: '&2论坛ID&f'
-#顶贴列表
-postertime: '&2顶帖日期&f'
-pageinfo: '&2当前/总页数:&f%PAGE%/%TOTALPAGE%&2, 翻页:&7/bt list <页码>'
-noposter: '&4没有找到顶帖数据!'
-#顶贴者列表
-posterplayer: '&2玩家ID&f'
-postertotal: '&2顶贴者数量&f'
-pageinfotop: '&2当前/总页数:&f%PAGE%/%TOTALPAGE%&2, 翻页:&7/bt top <页码>'
-noplayer: '&4没有找到玩家!'
-
-#奖励
-notbound: '&4您还未绑定账号!'
-nopost: '&4您暂未有新的顶帖记录!'
-overtime: '&4很抱歉您每天只能领取 &e%REWARDTIMES% &4次奖励!'
-waitamin: '&4连续顶帖间隔必须大于一分钟!'
-intervaltooshort: '&4您在 &f%TIME% &4的顶贴过于频繁, 您必须在距离上一次顶贴 &f%INTERVAL% &4分钟后再次顶贴才算有效.'
-reward: '&b您在 &f%TIME% &b进行的顶帖已得到回报.'
-extrareward: '&b您还获得了: %EXTRA%.'
-rewardgived: '&a奖励发放完毕!'
-broadcast: '&b玩家 &e%PLAYER% &b刚刚领取了顶贴奖励, 大家也快来顶贴吧! '
-
-#绑定
-enter: '&c请在聊天框输入您的论坛ID, 或输入下列关键词取消绑定: %KEYWORD%.'
-canceled: '&c绑定已取消.'
-repeat: '&c为防止输错ID, 请重复输入一次!'
-notsame: '&4抱歉, 两次输入不一致，请重新输入!'
-oncooldown: '&4抱歉您的账号正在绑定冷却中: &f%COOLDOWN% 天.'
-samebind: '&4已有相同的绑定,如果这是您的ID,请联系管理!'
-ownsamebind: '&4您已经绑定过相同ID!'
-bindingsuccess: '&a绑定成功!'
-
-#Check
-idowner: '&b这个论坛ID的绑定者为: &e%PLAYER% &f(%UUID%).'
-idnotfound: '&4未找到该论坛ID的记录.'
-ownerid: '&b这名玩家绑定的论坛ID为: &f%ID%.'
-ownernotfound: '&4未找到该玩家的记录.'
-
-#删除
-deletesuccess: '&c成功删除了该玩家的记录.'
-
-#其他
-nopermission: '&4对不起，您没有权限这么做!'
-invalid: '&4命令错误!'
-invalidnum: '&4无效的数字!'
-playercmd: '&4该命令必须由玩家执行!'
-pagenotvisible: '&4宣传帖目前处于不可视状态, 如果您看到这条消息请通知管理员!'
-none: '&4 无'
-failedgetweb: '获取网页时错误, 可能是由于网络波动!'
-#failedresolveweb中的信息可能在您的宣传帖被移入审核区时反复出现
-#您可以通过留空该项来禁用这项提示, 留空的格式应为-failedresolveweb: ''
-failedresolveweb: '处理网页信息失败, 宣传帖目前可能不可视或被删除!'
-faileduninstallmo: '未能按照预期卸载监听!'
+chat:
+  # 插件前缀
+  prefix: '&3&l[&d&lB&b&lT&3&l]&r '
+  # 重新加载
+  reload: '&a配置已重新加载!'
+  # 数据库
+  sql-exception: '连接数据库时出现异常，请查看控制台了解更多信息！'
+  #查询冷却
+  query-cooldown: '&4查询操作正在冷却，请在 %COOLDOWN% 秒后重试！'
+  #列表通用
+  posternum: '&2顶帖数量&f'
+  overpage: '&4您输入的页码超出了总页数!'
+  posterid: '&2论坛ID&f'
+  #顶贴列表
+  postertime: '&2顶帖日期&f'
+  pageinfo: '&2当前/总页数:&f%PAGE%/%TOTALPAGE%&2, 翻页:&7/bt list <页码>'
+  noposter: '&4没有找到顶帖数据!'
+  #顶贴者列表
+  posterplayer: '&2玩家ID&f'
+  postertotal: '&2顶贴者数量&f'
+  pageinfotop: '&2当前/总页数:&f%PAGE%/%TOTALPAGE%&2, 翻页:&7/bt top <页码>'
+  noplayer: '&4没有找到玩家!'
+  #奖励
+  reward:
+    notbound: '&4您还未绑定账号!'
+    nopost: '&4您暂未有新的顶帖记录!'
+    overtime: '&4很抱歉您每天只能领取 &e%REWARDTIMES% &4次奖励!'
+    waitamin: '&4连续顶帖间隔必须大于一分钟!'
+    intervaltooshort: '&4您在 &f%TIME% &4的顶贴过于频繁, 您必须在距离上一次顶贴 &f%INTERVAL% &4分钟后再次顶贴才算有效.'
+    reward: '&b您在 &f%TIME% &b进行的顶帖已得到回报.'
+    extrareward: '&b您还获得了: %EXTRA%.'
+    rewardgived: '&a奖励发放完毕!'
+    broadcast: '&b玩家 &e%PLAYER% &b刚刚领取了顶贴奖励, 大家也快来顶贴吧! '
+  #绑定
+  bind:
+    enter: '&c请在聊天框输入您的论坛ID, 或输入下列关键词取消绑定: %KEYWORD%.'
+    canceled: '&c绑定已取消.'
+    repeat: '&c为防止输错ID, 请重复输入一次!'
+    notsame: '&4抱歉, 两次输入不一致，请重新输入!'
+    oncooldown: '&4抱歉您的账号正在绑定冷却中: &f%COOLDOWN% 天.'
+    samebind: '&4已有相同的绑定,如果这是您的ID,请联系管理!'
+    ownsamebind: '&4您已经绑定过相同ID!'
+    bindingsuccess: '&a绑定成功!'
+  #Check
+  check:
+    idowner: '&b这个论坛ID的绑定者为: &e%PLAYER% &f(%UUID%).'
+    idnotfound: '&4未找到该论坛ID的记录.'
+    ownerid: '&b这名玩家绑定的论坛ID为: &f%ID%.'
+    ownernotfound: '&4未找到该玩家的记录.'
+  delete:
+    #删除
+    deletesuccess: '&c成功删除了该玩家的记录.'
+  other:
+    #其他
+    nopermission: '&4对不起，您没有权限这么做!'
+    invalid: '&4命令错误!'
+    invalidnum: '&4无效的数字!'
+    playercmd: '&4该命令必须由玩家执行!'
+    pagenotvisible: '&4宣传帖目前处于不可视状态, 如果您看到这条消息请通知管理员!'
+    none: '&4 无'
+    failedgetweb: '获取网页时错误, 可能是由于网络波动!'
+    #failedresolveweb中的信息可能在您的宣传帖被移入审核区时反复出现
+    #您可以通过留空该项来禁用这项提示, 留空的格式应为-failedresolveweb: ''
+    failedresolveweb: '处理网页信息失败, 宣传帖目前可能不可视或被删除!'
+    faileduninstallmo: '未能按照预期卸载监听!'
 
 #箱子GUI界面
 gui:

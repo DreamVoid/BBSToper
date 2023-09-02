@@ -12,6 +12,8 @@ import org.bukkit.plugin.java.JavaPlugin;
 import moe.feo.bbstoper.listener.InventoryListener;
 import moe.feo.bbstoper.database.DatabaseManager;
 
+import java.io.File;
+
 public class BBSToper extends JavaPlugin {
 	public static BBSToper INSTANCE;
 
@@ -44,7 +46,7 @@ public class BBSToper extends JavaPlugin {
 		}
 
 		new Metrics(this);
-		this.getLogger().info(Message.ENABLE.getString());
+		this.getLogger().info("All tasks finished. Welcome to use BBSToper!");
 	}
 
 	@Override
@@ -59,4 +61,9 @@ public class BBSToper extends JavaPlugin {
 		thread.start();
 	}
 
+	@Override
+	public void saveResource(String resourcePath, boolean replace) {
+		if(replace || !new File(getDataFolder(), resourcePath).exists()) // 我也不知道为什么Bukkit要丢一个警告出来
+			super.saveResource(resourcePath, replace);
+	}
 }

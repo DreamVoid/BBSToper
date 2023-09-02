@@ -73,7 +73,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-shade-plugin</artifactId>
-				<version>3.0.0</version>
+				<version>3.5.0</version>
 				<executions>
 					<execution>
 						<phase>package</phase>
@@ -99,17 +99,11 @@
 									<shadedPattern>moe.feo.jsoup</shadedPattern>
 								</relocation>
 								<relocation>
-									<pattern>com.zaxxer.hikari</pattern>
-									<shadedPattern>moe.feo.hikaricp</shadedPattern>
+									<pattern>com.zaxxer</pattern>
+									<shadedPattern>me.dreamvoid.bbstoper.libraries.com.zaxxer</shadedPattern>
 								</relocation>
 							</relocations>
 							<minimizeJar>false</minimizeJar>
-							<artifactSet>
-								<includes>
-									<include>org.jsoup</include>
-									<include>org.bstats</include>
-								</includes>
-							</artifactSet>
 							<createDependencyReducedPom>false</createDependencyReducedPom>
 						</configuration>
 					</execution>

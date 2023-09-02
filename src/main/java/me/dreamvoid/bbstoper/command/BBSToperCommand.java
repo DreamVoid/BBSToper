@@ -147,7 +147,7 @@ public class BBSToperCommand implements TabExecutor {
                 if (!sender.hasPermission("bbstoper.bypass.querycooldown")) {
                     double cooldown = getQueryCoolDown(((Player) sender).getUniqueId());
                     if (cooldown > 0) {
-                        sender.sendMessage(Message.PREFIX.getString() + Message.QUERYCOOLDOWN.getString()
+                        sender.sendMessage(Message.PREFIX.getString() + Message.QUERY_COOLDOWN.getString()
                                 .replaceAll("%COOLDOWN%", String.valueOf((int) cooldown)));
                         break;
                     } else queryrecord.put(((Player) sender).getUniqueId(), System.currentTimeMillis());
@@ -248,7 +248,7 @@ public class BBSToperCommand implements TabExecutor {
                 if (sender instanceof Player && !sender.hasPermission("bbstoper.bypassquerycooldown")) {
                     double cooldown = getQueryCoolDown(((Player) sender).getUniqueId());
                     if (cooldown > 0) {
-                        sender.sendMessage(Message.PREFIX.getString() + Message.QUERYCOOLDOWN.getString()
+                        sender.sendMessage(Message.PREFIX.getString() + Message.QUERY_COOLDOWN.getString()
                                 .replaceAll("%COOLDOWN%", String.valueOf((int) cooldown)));
                         break;
                     } else queryrecord.put(((Player) sender).getUniqueId(), System.currentTimeMillis());
@@ -311,7 +311,7 @@ public class BBSToperCommand implements TabExecutor {
                 if (sender instanceof Player && !sender.hasPermission("bbstoper.bypassquerycooldown")) {
                     double cooldown = getQueryCoolDown(((Player) sender).getUniqueId());
                     if (cooldown > 0) {
-                        sender.sendMessage(Message.PREFIX.getString() + Message.QUERYCOOLDOWN.getString()
+                        sender.sendMessage(Message.PREFIX.getString() + Message.QUERY_COOLDOWN.getString()
                                 .replaceAll("%COOLDOWN%", String.valueOf((int) cooldown)));
                         break;
                     } else queryrecord.put(((Player) sender).getUniqueId(), System.currentTimeMillis());

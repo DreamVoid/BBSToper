@@ -32,8 +32,7 @@ database:
             minimumIdle: 5
     #sqlite设置
     sqlite:
-        folder: '%PLUGIN_FOLDER%'
-        database: 'bbstoper.db'
+        location: '%PLUGIN_FOLDER%/bbstoper.db'
 
 mcbbs:
     #MCBBS链接（用于特殊情况，末尾一定要有斜杠“/”）
