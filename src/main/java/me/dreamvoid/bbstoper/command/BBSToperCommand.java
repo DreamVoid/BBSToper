@@ -170,13 +170,17 @@ public class BBSToperCommand implements TabExecutor {
                         // 判断玩家的顶贴粒度是否小于一分钟了
                         // 缓存里面有这次时间
                         // 然后再去遍历数据库里面存的时间
-                        for (String cachedtime : cache)
-                            if (cachedtime.equals(crawler.Time.get(i))) for (String topstate : topstates)
-                                if (topstate.equals(crawler.Time.get(i))) {// 如果数据库里面的时间也等于这次的时间
-                                    // 那就说明玩家肯定有两次同样时间的顶贴，说明玩家顶贴间隔小于一分钟
-                                    iswaitamin = true;// 我们这里只会提醒玩家一次
-                                    break;
+                        for (String cachedtime : cache) {
+                            if (cachedtime.equals(crawler.Time.get(i))) {
+                                for (String topstate : topstates) {
+                                    if (topstate.equals(crawler.Time.get(i))) {// 如果数据库里面的时间也等于这次的时间
+                                        // 那就说明玩家肯定有两次同样时间的顶贴，说明玩家顶贴间隔小于一分钟
+                                        iswaitamin = true;// 我们这里只会提醒玩家一次
+                                        break;
+                                    }
                                 }
+                            }
+                        }
                         if (!topstates.contains(crawler.Time.get(i))) {// 如果数据库里没有这次顶贴的记录
                             havepost = true;
                             String datenow = new SimpleDateFormat("yyyy-MM-dd").format(new Date());

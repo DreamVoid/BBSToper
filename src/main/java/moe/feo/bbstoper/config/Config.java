@@ -12,7 +12,6 @@ public enum Config {
 	DEBUG("debug"),
 	DATABASE_TYPE("database.type"),
 	DATABASE_PREFIX("database.prefix"),
-	DATABASE_TIMINGRECONNECT("timingreconnect"),
 	DATABASE_MYSQL_ADDRESS("database.mysql.address"),
 	DATABASE_MYSQL_DATABASE("database.mysql.database"),
 	DATABASE_MYSQL_USERNAME("database.mysql.username"),
