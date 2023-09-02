@@ -39,23 +39,23 @@ public class BBSToperCommand implements TabExecutor {
         
         switch (args[0].toLowerCase()){
             case "help": {
-                sender.sendMessage(Message.PREFIX.getString() + Message.HELP_TITLE.getString());
+                sender.sendMessage(Message.PREFIX.getString() + Message.HELP_TITLE.getString().replaceAll("%command%", label));
                 if (sender.hasPermission("bbstoper.command.reward"))
-                    sender.sendMessage(Message.PREFIX.getString() + Message.HELP_REWARD.getString());
+                    sender.sendMessage(Message.PREFIX.getString() + Message.HELP_REWARD.getString().replaceAll("%command%", label));
                 if (sender.hasPermission("bbstoper.command.testreward"))
-                    sender.sendMessage(Message.PREFIX.getString() + Message.HELP_TESTREWARD.getString());
+                    sender.sendMessage(Message.PREFIX.getString() + Message.HELP_TESTREWARD.getString().replaceAll("%command%", label));
                 if (sender.hasPermission("bbstoper.command.binding"))
-                    sender.sendMessage(Message.PREFIX.getString() + Message.HELP_BINDING.getString());
+                    sender.sendMessage(Message.PREFIX.getString() + Message.HELP_BINDING.getString().replaceAll("%command%", label));
                 if (sender.hasPermission("bbstoper.command.list"))
-                    sender.sendMessage(Message.PREFIX.getString() + Message.HELP_LIST.getString());
+                    sender.sendMessage(Message.PREFIX.getString() + Message.HELP_LIST.getString().replaceAll("%command%", label));
                 if (sender.hasPermission("bbstoper.command.top"))
-                    sender.sendMessage(Message.PREFIX.getString() + Message.HELP_TOP.getString());
+                    sender.sendMessage(Message.PREFIX.getString() + Message.HELP_TOP.getString().replaceAll("%command%", label));
                 if (sender.hasPermission("bbstoper.command.check"))
-                    sender.sendMessage(Message.PREFIX.getString() + Message.HELP_CHECK.getString());
+                    sender.sendMessage(Message.PREFIX.getString() + Message.HELP_CHECK.getString().replaceAll("%command%", label));
                 if (sender.hasPermission("bbstoper.command.delete"))
-                    sender.sendMessage(Message.PREFIX.getString() + Message.HELP_DELETE.getString());
+                    sender.sendMessage(Message.PREFIX.getString() + Message.HELP_DELETE.getString().replaceAll("%command%", label));
                 if (sender.hasPermission("bbstoper.command.reload"))
-                    sender.sendMessage(Message.PREFIX.getString() + Message.HELP_RELOAD.getString());
+                    sender.sendMessage(Message.PREFIX.getString() + Message.HELP_RELOAD.getString().replaceAll("%command%", label));
                 break;
             }
             case "binding": {

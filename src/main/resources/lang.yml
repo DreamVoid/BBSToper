@@ -113,12 +113,12 @@ extrainfo: '&b现在顶贴还可以获得 %EXTRA% 哦.'
 #帮助
 help:
     title: '&3&lBBSToper指令帮助'
-    help: '&3显示帮助信息: &b/bt help'
-    binding: '&3绑定论坛账号: &b/bt binding <MCBBS论坛ID>'
-    reward: '&3获取奖励: &b/bt reward'
-    testreward: '&3测试奖励: &b/bt testreward [ normal | incentive | offday ]'
-    list: "&3查看顶帖列表: &b/bt list [页码]"
-    top: "&3查看所有顶贴玩家排名: &b/bt top [页码]"
-    check: '&3检查: &b/bt check < bbsid | player > <值>'
-    delete: '&3删除某玩家的数据: &b/bt delete <玩家游戏ID>'
-    reload: '&3重载插件: &b/bt reload'
+    help: '&3显示帮助信息: &b/%command% help'
+    binding: '&3绑定论坛账号: &b/%command% binding <MCBBS论坛ID>'
+    reward: '&3获取奖励: &b/%command% reward'
+    testreward: '&3测试奖励: &b/%command% testreward [ normal | incentive | offday ]'
+    list: "&3查看顶帖列表: &b/%command% list [页码]"
+    top: "&3查看所有顶贴玩家排名: &b/%command% top [页码]"
+    check: '&3检查: &b/%command% check < bbsid | player > <值>'
+    delete: '&3删除某玩家的数据: &b/%command% delete <玩家游戏ID>'
+    reload: '&3重载插件: &b/%command% reload'
